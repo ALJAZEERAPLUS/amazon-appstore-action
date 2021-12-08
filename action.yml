@@ -1,0 +1,18 @@
+name: 'Amazon AppStore Deployment Action'
+description: Deploys an application to the Amazon AppStore.
+inputs: 
+  client-id:
+    description: The client ID of the Amazon AppStore application.
+    required: true
+  client-secret:
+    description: The client secret of the Amazon AppStore application.
+    required: true
+  app-id:
+    description: The ID of the Amazon AppStore application.
+    required: true
+  apk-file:
+    description: The path to the APK file to deploy.
+    required: true
+runs:
+  using: 'node12'
+  main: dist/index.js
