@@ -58,7 +58,7 @@ jobs:
 | client-id     | The client ID of the Amazon AppStore application.     |         |   True   |
 | client-secret | The client secret of the Amazon AppStore application. |         |   True   |
 | app-id        | The ID of the Amazon AppStore application.            |         |   True   |
-| apk-file      | The path to the APK file to deploy.                   |         |  False   |
+| apk-file      | The path to the APK file to deploy.                   |         |   True   |
 
 ## :thought_balloon: Support
 
