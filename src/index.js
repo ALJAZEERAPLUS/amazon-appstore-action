@@ -2,7 +2,7 @@ const core = require('@actions/core')
 const fetch = require('node-fetch')
 const fs = require('fs')
 
-;(async () => {
+async function run() {
   try {
     const clientId = core.getInput('client-id')
     const clientSecret = core.getInput('client-secret')
@@ -12,7 +12,7 @@ const fs = require('fs')
     let editId, apkId, eTag
 
     function handleErrors(response) {
-      if (!response.ok) throw Error(`[Error] response.statusText`)
+      if (!response.ok) throw Error(`[Error] ${response.statusText}`)
       return response
     }
 
@@ -122,4 +122,6 @@ const fs = require('fs')
   } catch (error) {
     core.setFailed(`[Error] There was an error with the action: ${error}`)
   }
-})()
+};
+
+run();
