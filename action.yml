@@ -14,7 +14,7 @@ inputs:
     description: The path to the APK file to deploy.
     required: true
 runs:
-  using: 'node12'
+  using: 'node16'
   main: src/index.js
 branding:
   icon: upload-cloud
